@@ -1,0 +1,15 @@
+server:
+  port: 2000
+
+spring:  application:    name: donor-service
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+    username: hr
+    password: hr
+  jpa:
+    show-sql: true
+    hibernate:      ddl-auto: update
+    generate-ddl: true
+
+eureka:  client:    service-url:
+      defaultZone: http://localhost:1234/eureka
