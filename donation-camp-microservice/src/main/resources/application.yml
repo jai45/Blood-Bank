@@ -1,0 +1,15 @@
+server:
+  port: 2050
+
+spring:  application:    name: camp-service
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+    username: hr
+    password: hr
+  jpa:
+    show-sql: true
+    hibernate:      ddl-auto: update
+    generate-ddl: true
+
+eureka:  client:    service-url:
+      defaultZone: http://localhost:1234/eureka
